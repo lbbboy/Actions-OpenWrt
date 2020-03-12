@@ -11,11 +11,11 @@ name: Build OpenWrt
 on:
   release:
     types: published
-  push:
-    branches:
-      - master
-    paths:
-      - '.config'
+#  push:
+#    branches:
+#      - master
+#    paths:
+#      - '.config'
 #  schedule:
 #    - cron: 0 8 * * 5
   watch:
@@ -69,9 +69,9 @@ jobs:
         cd openwrt
         ../$DIY_SH
 
-    - name: SSH connection to Actions
-      uses: P3TERX/debugger-action@master
-      if: env.SSH_ACTIONS == 'true'
+#    - name: SSH connection to Actions
+#      uses: P3TERX/debugger-action@master
+#      if: env.SSH_ACTIONS == 'true'
 
     - name: Download package
       id: package

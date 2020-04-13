@@ -24,7 +24,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: arch-latest
     if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
